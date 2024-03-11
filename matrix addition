@@ -1,0 +1,44 @@
+def add_matrices():
+    # Get dimensions of matrices
+    rows = int(input("Enter the number of rows: "))
+    cols = int(input("Enter the number of columns: "))
+
+    # Initialize matrices
+    matrix1 = []
+    matrix2 = []
+
+    # Input elements of first matrix
+    print("Enter the elements of the first matrix:")
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            element = int(input(f"Enter element [{i}][{j}]: "))
+            row.append(element)
+        matrix1.append(row)
+
+    # Input elements of second matrix
+    print("\nEnter the elements of the second matrix:")
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            element = int(input(f"Enter element [{i}][{j}]: "))
+            row.append(element)
+        matrix2.append(row)
+
+    # Add matrices
+    result = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            sum_elem = matrix1[i][j] + matrix2[i][j]
+            row.append(sum_elem)
+        result.append(row)
+
+    # Print result
+    print("\nResultant Matrix:")
+    for row in result:
+        print(row)
+
+
+# Call the function to add matrices
+add_matrices()
